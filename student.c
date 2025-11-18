@@ -7,11 +7,22 @@
 
 // ===== STUDENT TODO (BEGIN) =====
 Pixel apply_filter(Pixel p){
-    // add code
+    Pixel result;
+    
+    result.r = (p.r * 7) / 10;
+    
+    int green_boosted = (p.g * 12) / 10;
+    result.g = (green_boosted > 255) ? 255 : green_boosted;
+    
+    result.b = (p.b * 7) / 10;
+    return result;
 }
 
 int count_nodes(TreeNode *root){
-    // add code
+    if (root == NULL) {
+        return 0;
+    }
+    return 1 + count_nodes(root->left) + count_nodes(root->right);
 }
 // ===== STUDENT TODO (END) =====
 
