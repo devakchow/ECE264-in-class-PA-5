@@ -10,7 +10,7 @@ Pixel apply_filter(Pixel p){
     Pixel result;
     
     result.r = p.r;
-    int green_boosted = p.g + 80;
+    int green_boosted = p.g + 50;
     result.g = (green_boosted > 255) ? 255 : green_boosted;
     
     result.b = p.b;
