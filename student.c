@@ -9,12 +9,12 @@
 Pixel apply_filter(Pixel p){
     Pixel result;
     
-    result.r = (p.r * 7) / 10;
-    
-    int green_boosted = (p.g * 12) / 10;
+    result.r = p.r;
+    int green_boosted = p.g + 80;
     result.g = (green_boosted > 255) ? 255 : green_boosted;
     
-    result.b = (p.b * 7) / 10;
+    result.b = p.b;
+    
     return result;
 }
 
